@@ -1,0 +1,94 @@
+.education {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: inherit;
+  color: inherit;
+}
+
+.education h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.edu-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.edu-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.edu-icon-container {
+  font-size: 3rem;
+  flex-shrink: 0;
+  color: #6b73ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-text {
+  text-align: left;
+}
+
+.edu-text h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.edu-period {
+  font-weight: bold;
+  color: #6b73ff;
+  margin-bottom: 0.5rem;
+}
+
+.edu-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Dark mode */
+.app.dark .edu-card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.app.dark .edu-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edu-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-icon-container {
+    margin-bottom: 1rem;
+  }
+
+  .edu-text h3, .edu-text p, .edu-period {
+    text-align: center;
+  }
+}

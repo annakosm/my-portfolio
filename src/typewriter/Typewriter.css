@@ -1,0 +1,42 @@
+/* Typewriter.css */
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: bottom;
+  animation: blink 1s infinite;
+}
+
+.cursor::after {
+  content: "|"; /* shows a blinking pipe */
+  color: white; /* ensure it's visible */
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Segment styles */
+.hello {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 150%;
+  display: block;
+  line-height: 1.2;
+}
+
+.anna {
+  color: #5577cc;
+  font-style: italic;
+  display: block;
+  margin-left: 25rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}

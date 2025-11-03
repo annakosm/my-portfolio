@@ -1,0 +1,40 @@
+.footer {
+  background: rgba(107, 115, 255, 0.05);
+  color: #333;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #6b73ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #4a56d1;
+}
+
+.app.dark .footer {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
+}
+
+.app.dark .footer-links a {
+  color: #a4afff;
+}
+
+.app.dark .footer-links a:hover {
+  color: #6b73ff;
+}

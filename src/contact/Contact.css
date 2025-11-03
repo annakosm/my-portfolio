@@ -1,0 +1,111 @@
+/* =======================
+   CONTACT SECTION
+======================= */
+.contact-section {
+  padding: 5vh 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: inherit;
+  font-family: 'Inter', sans-serif;
+  color: inherit;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.contact-section h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  margin-bottom: 2vh;
+  color: inherit;
+  letter-spacing: 1px;
+}
+
+/* Contact box container */
+.contact-box {
+  background-color: inherit;
+  border-radius: 16px;
+  padding: 3vh 3vw;
+  width: min(60%, 900px);
+  box-sizing: border-box;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: scale(1.02);
+}
+
+/* Paragraph inside box */
+.contact-box p {
+  margin-bottom: 2vh;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: inherit;
+  line-height: 1.6;
+}
+
+/* Contact links (email, linkedin, github) */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #686ff5, #6b73ff);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.contact-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(85, 119, 204, 0.4);
+  background: linear-gradient(135deg, #6b73ff, #7d8aff);
+}
+
+/* Icon sizing */
+.contact-links svg {
+  font-size: 1.4rem;
+}
+
+/* Dark mode overrides */
+.app.dark .contact-box {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.app.dark .contact-links a {
+  background: linear-gradient(135deg, #555bf5, #7c83ff);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark .contact-links a:hover {
+  background: linear-gradient(135deg, #7c83ff, #a0a5ff);
+}
+
+/* Responsive adjustments */
+@media (max-width: 100%) {
+  .contact-box {
+    width: 100%;
+    padding: 3vh 4vw;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-links a {
+    width: 100%;
+    justify-content: center;
+  }
+}

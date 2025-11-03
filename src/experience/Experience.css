@@ -1,0 +1,93 @@
+.experience {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: inherit;
+  color: inherit;
+}
+
+.experience h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.exp-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 900px;       /* wider card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.exp-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;            /* space between icon and text */
+}
+
+.exp-icon-container {
+  font-size: 3rem;
+  flex-shrink: 0;          /* keep icon size */
+  color: #6b73ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-text {
+  text-align: left;
+}
+
+.exp-text h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.exp-period {
+  font-weight: bold;
+  color: #6b73ff;
+  margin-bottom: 0.5rem;
+}
+
+.exp-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Dark mode */
+.app.dark .exp-card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.app.dark .exp-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exp-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .exp-icon-container {
+    margin-bottom: 1rem;
+  }
+
+  .exp-text h3, .exp-text p, .exp-period {
+    text-align: center;
+  }
+}

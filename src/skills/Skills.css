@@ -1,0 +1,101 @@
+.skills-section {
+  padding: 4rem 2rem;
+  color: inherit;       /* inherit from app for day/night mode */
+  background: inherit;  /* inherit background */
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;    
+  color: inherit;        /* dynamic color */
+}
+
+.skills-section h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: inherit;        /* dynamic color */
+}
+
+/* Grid for boxed layout */
+.skills-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.6rem;
+  justify-items: center;
+}
+
+/* Each skill box */
+.skill-box {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  color: inherit;      /* text color dynamic */
+}
+
+.skill-box:hover {
+  background: rgba(245, 245, 245, 1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Icon inside the box */
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  color: inherit;       /* icon color dynamic */
+}
+
+/* Name + Level */
+.skill-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;       /* dynamic color */
+}
+
+.skill-info p {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: inherit;       /* dynamic color */
+  opacity: 0.9;
+}
+
+/* ⭐ Skill level icons */
+.level-icons {
+  color: #ffb400;       /* keeps gold stars consistent */
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* =======================
+   Dark mode overrides
+======================= */
+.app.dark .skill-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.app.dark .skill-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .skills-box-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .skill-box {
+    padding: 0.8rem;
+  }
+}

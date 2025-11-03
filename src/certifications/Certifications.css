@@ -1,0 +1,140 @@
+/* =======================
+   CERTIFICATIONS SECTION
+======================= */
+.certifications {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: inherit;
+  color: inherit;
+}
+
+.certifications h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+/* =======================
+   GRID LAYOUT
+======================= */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* =======================
+   CARD STYLING
+======================= */
+.cert-card {
+  position: relative; /* allows absolute button positioning */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* even spacing */
+  height: 320px; /* uniform height */
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cert-icon-container {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* =======================
+   ICON COLORS
+======================= */
+.cert-icon {
+  color: #6b73ff; /* default soft blue */
+  transition: all 0.3s ease;
+}
+
+.cert-icon.aws { color: #ff9900; }
+.cert-icon.kube { color: #326ce5; }
+.cert-icon.docker { color: #0db7ed; }
+
+.cert-card:hover .cert-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(107, 115, 255, 0.5));
+}
+
+/* =======================
+   YEAR & TITLE
+======================= */
+.cert-year {
+  font-weight: bold;
+  color: #6b73ff;
+  margin-bottom: 0.3rem;
+}
+
+.cert-card h3 {
+  font-size: 1.1rem;
+  margin: 0.2rem 0;
+  line-height: 1.3;
+}
+
+.cert-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* =======================
+   LINK BUTTON
+======================= */
+.cert-link-button {
+  position: absolute; /* top-right corner */
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #6b73ff;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.cert-link-button:hover {
+  background: #4a56d1;
+  transform: scale(1.2);
+}
+
+/* =======================
+   DARK MODE
+======================= */
+.app.dark .cert-card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.app.dark .cert-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app.dark .cert-icon { color: #a4afff; }
+.app.dark .cert-icon.aws { color: #ffc266; }
+.app.dark .cert-icon.kube { color: #70a0ff; }
+.app.dark .cert-icon.docker { color: #66d0ff; }
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .cert-card {
+    height: auto; /* adapt height on small screens */
+  }
+  .cert-icon-container {
+    font-size: 2.2rem;
+  }
+}
