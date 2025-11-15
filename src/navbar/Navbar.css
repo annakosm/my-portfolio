@@ -1,0 +1,144 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 300;
+}
+
+.app.dark .navbar {
+  background: rgba(18, 18, 18, 0.93);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #6b73ff;
+  object-fit: cover;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link.active {
+  color: #6b73ff;
+}
+
+.dark-mode-toggle {
+  background: rgba(107, 115, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: #6b73ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: #6b73ff;
+  color: #fff;
+}
+
+/* Desktop menu */
+.desktop-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Mobile only elements */
+.mobile-only,
+.mobile-controls,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  /* Mobile controls: dark mode + hamburger */
+  .mobile-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  /* Mobile menu links */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    gap: 1rem;
+    padding: 1.2rem 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    z-index: 200;
+  }
+
+  .app.dark .mobile-menu {
+    background: rgba(18, 18, 18, 0.95);
+  }
+
+  .mobile-menu.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .mobile-menu .nav-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .mobile-menu .nav-link.active {
+    color: #6b73ff;
+  }
+
+  nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 400;
+  }
+}
