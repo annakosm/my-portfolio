@@ -40,3 +40,19 @@
   font-size: 1.8rem;
   line-height: 1.2;
 }
+
+
+@media (max-width: 768px) {
+  .hello {
+    font-size: 1.6rem !important;
+    display: block;
+    text-align: center;
+  }
+
+  .anna {
+    font-size: 1.4rem !important;
+    margin-left: 0 !important;
+    display: block;
+    text-align: center;
+  }
+}
