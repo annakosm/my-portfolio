@@ -13,12 +13,12 @@ import { GiDiploma } from "react-icons/gi";
 import "./Skills.css";
 
 const technicalSkills = [
-  { name: "Java", icon: <FaJava color="#f89820" />, level: "Expert" },
+  { name: "Java", icon: <FaJava color="#f89820" />, level: "Advanced" },
   { name: "Spring Boot", icon: <SiSpringboot color="#6db33f" />, level: "Advanced" },
-  { name: "Kafka", icon: <SiApachekafka color="#231f20" />, level: "Intermediate" },
+  { name: "Kafka", icon: <SiApachekafka color="#231f20" />, level: "Advanced" },
   { name: "Docker", icon: <FaDocker color="#0db7ed" />, level: "Advanced" },
-  { name: "Relational DB (Oracle/MySQL)", icon: <FaDatabase color="#336791" />, level: "Advanced" },
-  { name: "Python", icon: <FaPython color="#3776ab" />, level: "Advanced" },
+  { name: "Relational DB (Oracle/MySQL)", icon: <FaDatabase color="#336791" />, level: "Intermediate" },
+  { name: "Python", icon: <FaPython color="#3776ab" />, level: "Intermediate" },
   { name: "Git", icon: <FaGitAlt color="#f1502f" />, level: "Advanced" },
   { name: "React", icon: <FaReact color="#61dafb" />, level: "Intermediate" },
 ];
